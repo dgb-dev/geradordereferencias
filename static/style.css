@@ -1,0 +1,194 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .container {
+    background: #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabeçalho */
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    margin-block: 5rem;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ddd;
+}
+
+/* Formulário */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"], form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: #007bff;
+}
+
+form input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode form button {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Resultados */
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    word-wrap: break-word; /* Quebra as palavras longas */
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    width: 100%;
+}
+
+ul li img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode ul li {
+    background: #444;
+    border-color: #555;
+}
+
+body.dark-mode ul li a {
+    color: #66b2ff;
+}
+
+/* Histórico */
+details {
+    margin-bottom: 15px;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+details ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+p {
+    text-align: center;
+    margin-block: 3rem;
+}
+
+/* Botão de alternância de tema */
+button#theme-toggle {
+    background: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button#theme-toggle:hover {
+    background: #007bff;
+    color: white;
+}
+
+body.dark-mode button#theme-toggle {
+    color: #66b2ff;
+    border-color: #66b2ff;
+}
+
+body.dark-mode button#theme-toggle:hover {
+    background: #66b2ff;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+}
